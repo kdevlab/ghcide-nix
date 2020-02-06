@@ -10,6 +10,7 @@ let
             src = sources.ghcide;
             inherit stackYaml;
             modules = [({config, ...}: {
+              doHaddock = false;
               ghc.package = ghc;
               compiler.version = pkgs.lib.mkForce ghc.version;
               reinstallableLibGhc = true;
